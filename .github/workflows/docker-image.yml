@@ -21,8 +21,8 @@ jobs:
 
       - name: Build and tag Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/my-spring-app:${{ github.sha }} .
-          docker tag ${{ secrets.DOCKER_USERNAME }}/my-spring-app:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/my-spring-app:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/gateway-service${{ github.sha }} .
+          docker tag ${{ secrets.DOCKER_USERNAME }}/gateway-service:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/gateway-service:latest
 
       - name: Push Docker image to Docker Hub
         run: |
