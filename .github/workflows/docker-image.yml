@@ -3,7 +3,7 @@ name: Build, Push Docker Image and Release Helm Charts
 on:
   push:
     branches:
-      - main  # Change this to the branch you want to trigger the workflow on
+      - main  # Change ranch you want to trigger the workflow on
 
 jobs:
   build-and-push:
