@@ -18,7 +18,7 @@ public class GatewayConfiguration {
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         RouteLocatorBuilder.Builder routes = builder.routes();
 
-        List<String> serviceNames = kubernetesServiceDiscovery.getServiceNames("default", "app=myapp");
+        List<String> serviceNames = kubernetesServiceDiscovery.getServiceNames("default", "app=spring-microservice");
 
         serviceNames.forEach(serviceName -> {
             routes.route(serviceName, r -> r

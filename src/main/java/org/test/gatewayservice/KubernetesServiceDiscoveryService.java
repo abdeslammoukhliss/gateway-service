@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @org.springframework.stereotype.Service
-public class KubernetesServiceDiscoveryService {
+public class KubernetesServiceDiscoveryService   {
 
     private final KubernetesClient kubernetesClient;
 
