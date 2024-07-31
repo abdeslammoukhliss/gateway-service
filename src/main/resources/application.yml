@@ -10,7 +10,26 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+      routes:
+        - id: categories-service
+          uri: http://categories-service:8080
+          predicates:
+            - Path=/categories-service/**
+    kubernetes:
+      discovery:
+        enabled: true
+        namespaces: default
+        metadata:
+          add-ports: true
+        service-labels:
+            app: spring-microservice
 
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.kubernetes: DEBUG
+    org.springframework.cloud.kubernetes.client: DEBUG
 management:
   server:
     port: 9090
@@ -24,4 +43,6 @@ management:
     restart:
       enabled: true
     info:
+      enabled: true
+    gateway:
       enabled: true

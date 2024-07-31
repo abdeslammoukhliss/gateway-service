@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-@Configuration
+/*@Configuration
 public class GatewayConfiguration {
 
     @Autowired
@@ -21,9 +21,9 @@ public class GatewayConfiguration {
         serviceNames.forEach(serviceName -> {
             routes.route(serviceName, r -> r
                     .path("/" + serviceName + "/**")
-                    .uri("lb://" + serviceName)
+                    .uri("http://" + serviceName+":8080")
             );
         });
         return routes.build();
     }
-}
+}*/
