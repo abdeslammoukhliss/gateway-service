@@ -24,7 +24,6 @@ spring:
         service-labels:
             app: spring-microservice
 
-
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
